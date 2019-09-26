@@ -54,7 +54,6 @@ imgHinput.addEventListener("change", function (e) {
 });
 
 imgBackColor.addEventListener("change", function (e) {
-    debugger;
     imagePlace.style.backgroundColor = imgBackColor.value;
 })
 
@@ -155,23 +154,32 @@ function roundCorners() {
 }
 
 function circleCorners() {
-    var canvas=document.getElementById("canvas");
-    var ctx=canvas.getContext("2d");
-    var cw=canvas.width;
-    var ch=canvas.height;
-    
-    var img=new Image();
-    img.onload=start;
-    img.src="https://i.stack.imgur.com/oURrw.png";
-    function start(){
-      var cw,ch;
-      cw=canvas.width=img.width;
-      ch=canvas.height=img.height;
-      ctx.drawImage(img,0,0);
-      ctx.globalCompositeOperation='destination-in';
-      ctx.beginPath();
-      ctx.arc(cw/2,ch/2,ch/2,0,Math.PI*2);
-      ctx.closePath();
-      ctx.fill();
+    var canvas = imagePlace;
+    var context = canvas.getContext('2d');
+    var imageObj = new Image();
+    imageObj.onload = function () {
+        canvas.width = parseInt(imgWinput.value, 10);
+        canvas.height = parseInt(imgHinput.value, 10);
+        context.drawImage(imageObj, 0, 0, imageObj.width, imageObj.height,
+            0, 0, canvas.width, canvas.height);
+        context.globalCompositeOperation = 'destination-in';
+        context.beginPath();
+        context.arc(canvas.width / 2, canvas.height / 2, canvas.height / 2, 0, Math.PI * 2);
+        context.closePath();
+        context.fill();
+        imgWinput.value = canvas.width;
+        imgHinput.value = canvas.height;
+    }
+    imageObj.src = originalImg;
+    function start() {
+        var cw, ch;
+        cw = canvas.width = img.width;
+        ch = canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+        ctx.globalCompositeOperation = 'destination-in';
+        ctx.beginPath();
+        ctx.arc(cw / 2, ch / 2, ch / 2, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
     }
 }
