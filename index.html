@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Icon Genitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <div class="columns">
+    <!-- Ecran principal -->
+    <div class="column content" style="text-align: center; align-content: center">
+      <div class="image-handler" style="max-width: 500px; max-height: 400px;
+        margin-left: auto; margin-right: auto; margin-top: 10%">
+        <!--<img class="imgEdition" src="" alt="">-->
+        <canvas src="" class="imgEdition" width="500" height="400"
+          style="background-color:hsl(141, 71%, 48%);"></canvas>
+      </div>
+    </div>
+    <!-- Barre d'outils -->
+    <div class="column is-one-quarter container">
+      <div class="field">
+        <label class="label is-medium">Ajouter une image</label>
+        <div class="columns">
+          <div class="column">
+            <div class="file">
+              <label class="file-label" style="width: 100%; height: 100%; padding: 40px">
+                <input class="file-input imgInput" type="file" name="resume">
+                <span class="file">
+                  <span class="file-icon is-large">
+                    <i class="fa fa-5x fa-file-upload has-text-success"></i>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label is-medium">Dimensions</label>
+        <input type="range" min="1" max="100" value="50" class="slider imgRange" style="width: 80%;">
+        <div class="columns">
+          <div class="column">
+            <div class="columns">
+              <div class="column is-one-fifth">
+                <span class="label is-medium">H</span>
+              </div>
+              <div class="column">
+                <input class="imgWconfig input" type="number" value="0">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <div class="column is-one-fifth">
+                <span class="label is-medium">L</span>
+              </div>
+              <div class="column">
+                <input class="imgHconfig input" type="number" value="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label is-medium">Angles</label>
+        <div class="columns">
+          <div class="column">
+            <div>
+              <i class="fas fa-2x fa-square-full"></i>
+            </div>
+            <span>Droits</span>
+          </div>
+          <div class="column">
+            <div>
+              <span onclick="roundCorners()"><i class="fas fa-2x fa-square"></i></span>
+            </div>
+            <span>Arrondis</span>
+          </div>
+          <div class="column">
+            <div>
+              <i class="fas fa-2x fa-circle"></i>
+            </div>
+            <span>Ronds</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label is-medium">Fond</label>
+        <div class="columns">
+          <div class="column">Pipette</div>
+          <div class="column">
+            <input type="color" class="ImgBackgroundColor">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="columns">
+          <div class="column">
+            <a class="button is-success" onclick="exportImg()">Valider</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+</body>
+
+</html>

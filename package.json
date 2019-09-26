@@ -1,0 +1,20 @@
+{
+  "name": "Icon-genitor",
+  "version": "1.0.0",
+  "description": "A minimal icon creation tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "evaluation",
+    "iconGenitor"
+  ],
+  "author": "Moa",
+  "license": "",
+  "devDependencies": {
+    "electron": "^6.0.10"
+  },
+  "dependencies": {}
+}

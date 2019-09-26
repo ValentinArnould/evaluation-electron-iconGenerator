@@ -1,0 +1,20 @@
+Faire une application avec ElectronJS permettant de générer des icones à partir d'une image présente sur votre disque
+
+process attendu :
+
+on selectionne une image sur son disque dur,
+elle est affiché au centre dans un carré
+on selectionne la taille de redimensionnement
+on selectionne les angles de l'icone à générer 0 / 5% / 50% => faire en sorte que visuellement l'utilisateur se rende compte du resultat
+on selectionne le fond que l'on souhaite avoir (rien = transparent) => faire en sorte que visuellement l'utilisateur se rende compte du resultat
+on click sur valider et proposez à l'utilisateur de définir ou il souhaite l'enregistrer
+
+
+il n'est pas autorisé d'enregistrer le fichier avant que l'utilisateur ne le demande
+l'interface de rendu peut etre en canvas ou en HTML, au choix
+vous pouvez vous appuyer sur https://github.com/aheckmann/gm link cette librairie pour faire de la manipulation d'image sans canvas
+
+Il est attendu qu'apres avoir cloné votre repo un npm install && npm start soit suffisant pour vérifier votre travail.
+Enjoy !!
+
+
