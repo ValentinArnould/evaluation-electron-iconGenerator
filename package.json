@@ -14,7 +14,7 @@
   "author": "Moa",
   "license": "",
   "devDependencies": {
-    "electron": "^6.0.10"
+    "electron": "^9.1.0"
   },
   "dependencies": {}
 }
